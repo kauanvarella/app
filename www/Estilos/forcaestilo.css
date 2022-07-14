@@ -1,0 +1,47 @@
+/*Começo CSS do Header*/
+.navbar{
+    height: 70px;
+}
+
+.textonav{
+    margin-top: 1%;
+}
+
+hr{
+    margin-top: 2%;
+}
+
+li{
+    margin-left: 30px;
+}
+/*Fim CSS do Header*/
+
+
+
+/*Começo CSS do do Body*/
+body{
+    background-color: #ffffe0;
+    text-align: center;
+}
+
+main{
+    margin-top: 10%;
+}
+
+.coluna{
+    height: 600px;
+    border: 1px solid;
+}
+/*Fim CSS do Body*/
+
+
+
+/*Começo CSS do Jogo*/
+#palavraespacos{
+    font-size: 100px;
+}
+
+#colletra{
+    width: 9%;
+}
+/*Fim CSS do Jogo*/

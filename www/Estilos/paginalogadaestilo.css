@@ -1,0 +1,89 @@
+body{
+    background-color: #ffffe0;
+    text-align: center;
+}
+
+.navbar{
+    height: 70px;
+}
+
+.textonav{
+    margin-top: 1%;
+}
+
+hr{
+    margin-top: 2%;
+}
+
+main{
+    display: flex;
+    margin-top: 10%;
+    height: 350px;
+}
+
+.row{
+    justify-content: center;
+    width: 110%;
+}
+
+.card{
+    box-shadow: 3px 7px 10px rgb(119, 118, 118);
+}
+
+#div-img-projetos1{
+    margin-right: 50px;
+}
+
+#div-img-projetos3{
+    margin-left: 50px;
+}
+
+li{
+    margin-left: 30px;
+}
+
+#main2{
+    margin-top: 6.5%;
+}
+
+footer{
+    margin-top: 150px;
+}
+
+@media(max-width: 750px) {    
+
+    .row{
+        margin-top: -30%;
+        height: 330%;
+    }
+
+    .coluna{
+        width: 70%;
+        margin: 20px;
+    }
+
+    #div-img-projetos1{
+        margin-left: 13%;
+    }
+
+    #div-img-projetos3{
+        margin-right: 13%;
+    }
+
+
+    li{
+        border: solid 1px black;
+        margin-top: 2.5%;;
+    }
+
+    #menu{
+        margin-top: 7.5%;
+        margin-bottom: 7.5%;
+    }
+
+    #nav-deslogar{
+        border: solid 1px #ffc107;
+        padding: 1%;
+        
+    }
+}
