@@ -1,0 +1,47 @@
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent any
+
+    stages {
+        stage('Terraform Destroy') {
+            steps {
+                cd. '/home/ubuntu/infra-aws/infra-aws/env/prod'
+                terraform destroy -auto-approve
+            }
+        } 
+
+        stage('Terraform Init') {
+           steps {
+                cd './home/ubuntu/infra-aws/infra-aws/env/prod'
+                git clone 'https://github.com/kauanvarella/infra-aws.git'
+                terraform init
+            }
+        }
+
+        stage('Terraform Apply') {
+            steps {
+                cd './home/ubuntu/infra-aws/infra-aws/env/prod'
+                terraform apply -auto-approve
+            }
+        }
+
+
+        stage('Apps') {
+            steps {
+                cd './home/ubuntu'
+                sudo yum update -y
+                sudo amazon-linux-extras install docker -y
+                sudo service docker start
+                sudo systemctl enable docker
+                sudo usermod -a -G docker ec2-user
+                sudo yum install git -y
+                sudo curl -L 'https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose'
+                sudo chmod +x '/usr/local/bin/docker-compose'
+                git clone 'https://github.com/kauanvarella/meu-app.git'
+                cd meu-app/
+                sudo docker-compose up -d
+            }
+        }
+          
+    }
+}

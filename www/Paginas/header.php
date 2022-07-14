@@ -16,7 +16,7 @@
             </ul>
         </div>     
 
-        <a class="navbar-brand textonav" id="nav-deslogar" href="index.php">Deslogar<hr></a>
+        <a class="navbar-brand textonav" id="nav-deslogar" href="../index.php">Deslogar<hr></a>
     </nav>
 </header>
 

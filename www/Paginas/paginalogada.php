@@ -56,7 +56,7 @@
                 <div class="col-md-2 coluna" id="div-img-projetos3">
                     <div class="card bg-warning">
                         <a href="..\Paginas\album.php">
-                            <img id="imagem-album" class="card-img" width="100%" height="100%" src="..\Imagens\Album.png" alt="album">
+                            <img id="imagem-album" class="card-img" width="100%" height="100%" src="..\Imagens\album.png" alt="album">
                         </a>
     
                         <div class="card-body bg-light">
