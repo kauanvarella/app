@@ -1,7 +1,5 @@
 pipeline {
-    agent { 
-        dockerfile true { label "Build da Imagem" } 
-    }
+    agent { dockerfile true }
     stages {       
         stage('Deploy da aplicacao') {
             steps {
