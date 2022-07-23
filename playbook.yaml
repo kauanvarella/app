@@ -1,0 +1,13 @@
+- hosts: Projeto-app
+  become: yes
+  tasks: 
+    - name: php-apache
+      docker:
+        name: app
+        image: webdevops/php-apache
+        state: alpine-php7
+        pull: always
+        volumes:
+        - "./www:/app"
+        ports:
+        - "80:80"
