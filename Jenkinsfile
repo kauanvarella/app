@@ -4,7 +4,7 @@ pipeline {
         stage ('Copiando o app para dentro da instancia') {
             steps {
                 sh 'chmod 600 ssh-prod-meuapp.pem'
-                withCredentials([sshUserPrivateKey(credentialsId: 'private-key', disableHostKeyChecking: true, keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'private-key', keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
                     copy(file:"/www", tofile:"./")
                 }                
             }
