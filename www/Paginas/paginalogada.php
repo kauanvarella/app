@@ -73,7 +73,7 @@
 
                 <div class="col-md-2 coluna" id="div-img-projetos1">
                     <div class="card bg-warning">
-                        <a href="..\Paginas\forca.php">
+                        <a href="..\Paginas\album.php">
                             <img id="imagem-calculadora" class="card-img-top" width="100%" height="100%" src="..\Imagens\calculadoraimc.png" alt="calculadora">
                         </a>
     
@@ -85,8 +85,8 @@
             
                 <div class="col-md-2 coluna" id="div-img-projetos2">
                     <div class="card bg-warning">
-                        <a href="..\Paginas\forca.php">
-                            <img id="imagem-forca" class="card-img-top" width="100%" height="100%" src="..\Imagens\aleatorio.png" alt="forca">
+                        <a href="..\Paginas\album.php">
+                            <img id="sorteador" class="card-img-top" width="100%" height="100%" src="..\Imagens\aleatorio.png" alt="sorteador">
                         </a>
     
                         <div class="card-body bg-light">
