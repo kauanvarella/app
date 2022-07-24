@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'chmod 600 ssh-prod-meuapp.pem'
                 withCredentials([sshUserPrivateKey(credentialsId: 'private-key', keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
-                    sh 'cp /www /www'
+                    sh 'cp ./www /www'
                 }                
             }
         }
