@@ -11,7 +11,7 @@
 
     - name: Copiando o app para dentro da instancia
       copy:
-        src: /www
+        src: ./www
         dest: /www
         owner: ubuntu
         group: ubuntu
