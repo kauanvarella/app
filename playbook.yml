@@ -11,12 +11,12 @@
 
     - name: Copiando o app para dentro da instancia
       copy:
-        src: /www
+        src: ./www
         dest: /www
         owner: ubuntu
         group: ubuntu
         mode: '0644'
-        
+
     # - name: "Copiando o app para dentro da instancia"
     #   copy: src=/www/ dest=/www
 
@@ -28,4 +28,4 @@
         ports:
           - "80:80"
         volumes:
-          - /www:/app
+          - ./www:/app
