@@ -1,10 +1,14 @@
 pipeline {
     agent { dockerfile true }
     stages {       
+        stage ('Copiando o app para dentro da instancia') {
+            sh 'chmod 600 ssh-prod-meuapp.pem'
+            withCredentials([sshUserPrivateKey(credentialsId: 'private-key', disableHostKeyChecking: true, keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
+                copy(file:"/www", tofile:"./")
+            }
+        }
         stage('Deploy da aplicacao') {
             steps {
-                sh 'chmod 600 ssh-prod-meuapp.pem'
-                copy(file:"/www", tofile:"./")
                 ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts.inv', playbook: 'playbook.yml'                                    
             }
         }
