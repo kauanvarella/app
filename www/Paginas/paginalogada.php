@@ -23,7 +23,6 @@
         <script src="..\Scripts\scriptpaginalogada.js"></script>
     </head>
 
-
     <?php include 'header.php'?>
 
     <body>
