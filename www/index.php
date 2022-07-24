@@ -100,8 +100,8 @@
                 
                 <div class="col-md-6" id="principal">
                     <div class="card-body">
-                        <h5 class="card-title text-warning" id="principal-logo">TESTE X</h5>
-                        <p class="card-text" id="principal-logo-mensagem">Bem-vindo a página do projeto X, onde vai ser possível fazer X coisas que ainda estão sendo definidas</p><br>
+                        <h5 class="card-title text-warning" id="principal-logo">PROJETO X</h5>
+                        <p class="card-text" id="principal-logo-mensagem">Bem-vindo a página do Projeto X, onde vai ser possível fazer X coisas que ainda estão sendo definidas</p><br>
                         <p class="card-text" id="principal-logo-mensagem">Inscreva-se agora e aproveite o X conteúdo</p>
                     </div>
                 </div>
