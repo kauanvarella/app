@@ -16,5 +16,5 @@
         state: started
         ports:
           - "80:80"
-        volumes:
-          - /www:/app
+        devices:
+          - www:/app
