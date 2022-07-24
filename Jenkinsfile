@@ -2,9 +2,11 @@ pipeline {
     agent { dockerfile true }
     stages {       
         stage ('Copiando o app para dentro da instancia') {
-            sh 'chmod 600 ssh-prod-meuapp.pem'
-            withCredentials([sshUserPrivateKey(credentialsId: 'private-key', disableHostKeyChecking: true, keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
-                copy(file:"/www", tofile:"./")
+            steps {
+                sh 'chmod 600 ssh-prod-meuapp.pem'
+                withCredentials([sshUserPrivateKey(credentialsId: 'private-key', disableHostKeyChecking: true, keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
+                    copy(file:"/www", tofile:"./")
+                }                
             }
         }
         stage('Deploy da aplicacao') {
