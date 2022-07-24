@@ -9,8 +9,13 @@
       pip:
         name: docker
 
-    - name: "Copiando o app para dentro da instancia"
-      copy: src=./www dest=/www
+    - name: Copiando o app para dentro da instancia
+      copy:
+        src: /www/
+        dest: /www
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
 
     - name: Web Server
       docker_container:
