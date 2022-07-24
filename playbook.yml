@@ -9,7 +9,10 @@
       pip:
         name: docker
 
-    - name: php-apache
+    - name: "Copiando o app para dentro da instancia"
+      copy: src=./www dest=/www
+
+    - name: Web Server
       docker_container:
         name: app
         image: webdevops/php-apache:alpine-php7
@@ -17,4 +20,4 @@
         ports:
           - "80:80"
         volumes:
-          - /www/:/app
+          - /www:/app
