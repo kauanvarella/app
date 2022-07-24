@@ -5,9 +5,7 @@ pipeline {
             steps {
                 sh 'chmod 600 ssh-prod-meuapp.pem'
                 withCredentials([sshUserPrivateKey(credentialsId: 'private-key', keyFileVariable: 'private_key', usernameVariable: 'ubuntu')]) {
-                    copy(todir:"./") {
-                        fileset(dir:"/www")
-                    }
+                    sh 'copy src=/www dest=/www'
                 }                
             }
         }
