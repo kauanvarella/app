@@ -17,4 +17,4 @@
         ports:
           - "80:80"
         volumes:
-          - www:/app
+          - /www/:/app
