@@ -2,12 +2,12 @@
   become: yes
   tasks: 
     - name: php-apache
-      docker:
+      docker_container:
         name: app
-        image: webdevops/php-apache
-        state: alpine-php7
-        pull: always
-        volumes:
-        - "./www:/app"
+        image: webdevops/php-apache:alpine-php7
+        state: started
         ports:
-        - "80:80"
+          - "80:80"
+        volumes:
+          - ./www:/app
+      
