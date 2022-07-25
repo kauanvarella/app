@@ -1,6 +1,6 @@
 <?php
 
-    $db =  new PDO('mysql:localhost:8080;dbname=projeto;charset=utf8', 'root', 'root');
+    $db =  new PDO('mysql:localhost:8086;dbname=dbprojeto;charset=utf8', 'root', 'root');
     $consulta = $db->query('SELECT usuario, senha FROM cadastros');
     $listaconsulta = $consulta->fetchAll();
     $cadastra = true;

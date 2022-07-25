@@ -108,7 +108,7 @@
     
                 <!-- Login -->
                 <div class="col-md-4" id="formulario">
-                    <form id="login" action="./Paginas/paginalogada.php" method="POST">
+                    <form id="login" action="./Scripts/login.php" method="POST">
                         <div id="login-informativo">
                             <p>Faça login ou <a id="alertamsg" class="text-warning" href="#" data-toggle="modal" data-target="#modalcadastro"><b>inscreva-se clicando aqui</b></a></p>
                         </div>
