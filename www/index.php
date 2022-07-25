@@ -74,7 +74,7 @@
         <?php if($_GET['valor'] == 1){ ?>
             <script>
                 $(window).on('load',function(){
-                    document.getElementById("senhainformativo").innerHTML = "Usuário ou senha incorretos. Esqueceu a senha? <a class='text-body' href='#'><b>Clique aqui para recuperar</b></a>";
+                    document.getElementById("senhainformativo").innerHTML = "Usuário ou senha incorretos. Esqueceu a senha? <a class='text-warning' href='#'><b>Clique aqui para recuperar</b></a>";
                     document.getElementById("senhainformativo").classList.remove('text-muted');
                     document.getElementById("senhainformativo").classList.add('text-danger');
                 });
