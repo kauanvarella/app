@@ -1,7 +1,7 @@
 <?php
 
     try {
-        $db = new PDO('mysql:host=172.17.0.5;dbname=dbprojeto', 'root', 'root');
+        $db = new PDO('mysql:host=localhost:3306;dbname=dbprojeto', 'root', 'root');
         $consulta = $db->query('SELECT usuario, senha FROM cadastros');
         $listaconsulta = $consulta->fetchAll();
     
