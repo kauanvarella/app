@@ -114,7 +114,7 @@
                         </div>
                         <div class="form-group">
                             <input class="form-control form-control-lg" type="text" id="user" name="user" aria-describedby="user" placeholder="Usuário">
-                            <small id="email-informativo" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                            <small id="email-informativo" class="form-text text-muted">Nunca vamos compartilhar seu email com ninguém.</small>
                         </div>
         
                         <div class="form-group">
