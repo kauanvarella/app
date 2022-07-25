@@ -77,6 +77,8 @@
                     document.getElementById("senhainformativo").innerHTML = "Usuário ou senha incorretos. Esqueceu a senha? <a class='text-warning' href='#'><b>Clique aqui para recuperar</b></a>";
                     document.getElementById("senhainformativo").classList.remove('text-muted');
                     document.getElementById("senhainformativo").classList.add('text-danger');
+                    document.getElementById("user").classList.add('is-invalid');
+                    document.getElementById("senha").classList.add('is-invalid');
                 });
             </script>
         <?php } ?>
